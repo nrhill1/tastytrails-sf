@@ -1,3 +1,5 @@
+/* globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -26,8 +28,23 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.foodtruck_map {
-  width: 100%;
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+h1:hover {
+  letter-spacing: 0.15rem;
+  text-shadow: 5px 9px 13px rgba(60, 90, 166, 0.83), 0 0 5px #0000ff;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-transition: all 0.65s ease;
+  -moz-transition: all 0.65s ease;
+  transition: all 0.65s ease;
+}
+
+.map_container {
+  width: 85%;
   height: 65%;
   margin: 0 auto;
 }

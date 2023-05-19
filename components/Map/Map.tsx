@@ -9,10 +9,11 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css'; // Re-uses images from ~leaflet package
 import 'leaflet-defaulticon-compatibility';
 
+import mapStyles from "../../styles/Map.module.css"
 
 const ICON = icon({
   iconUrl: "marker.png",
-  iconSize: [16, 16],
+  iconSize: [16, 10],
 })
 
 const Map: React.FC = () => {
@@ -42,13 +43,13 @@ const Map: React.FC = () => {
         <div>
             <MapContainer
                 center={[37.7749, -122.4194]} zoom={13} scrollWheelZoom={true}
-                style={{ width: '100%', height: '600px', margin: '0 auto' }}>
+                style={{ width: '100%', height: '600px', margin: '0 auto', border: '1.5px whitesmoke solid', borderRadius: '10px', marginBottom: '20px' }}
+            >
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
                 {foodTrucks.length > 0 ? foodTrucks.map((truck) => {
-                    console.log([parseFloat(truck.longitude), parseFloat(truck.latitude)])
                     return (
                         <Marker
                             position={[parseFloat(truck.latitude), parseFloat(truck.longitude)]}

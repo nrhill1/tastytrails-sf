@@ -3,11 +3,11 @@
 'use client';
 
 import dynamic from "next/dynamic";
-
+import loading from "../../app/loading"
 
 const Map = dynamic(() => import("./Map"), {
     ssr: false,
-    loading: () => <p>Loading...</p>
+    loading: loading,
 })
 
 export default Map;

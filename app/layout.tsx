@@ -1,9 +1,12 @@
 // ./app/layout.tsx
 
-import './globals.css'
-import { Inter } from 'next/font/google'
+import '../styles/globals.css'
+import { Vibur } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const vb = Vibur({
+  subsets: ["latin"],
+  weight: "400"
+});
 
 export const metadata = {
   title: 'Create Next App',
@@ -17,8 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <h1>StreetEats SF</h1>
-      <body className={inter.className}>{children}</body>
+      <body className={vb.className}>{children}</body>
     </html>
   )
 }
