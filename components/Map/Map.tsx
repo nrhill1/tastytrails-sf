@@ -14,7 +14,7 @@ import styles from "../../styles/Map.module.css"
 
 const ICON = icon({
   iconUrl: "marker.png",
-  iconSize: [14, 10]
+  iconSize: [20, 28]
 })
 
 
