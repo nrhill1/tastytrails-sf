@@ -1,5 +1,4 @@
 // ./components/Map/index.tsx
-
 'use client';
 
 import dynamic from "next/dynamic";

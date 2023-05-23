@@ -1,6 +1,6 @@
 // ./components/Map/Map.tsx
-
 "use client";
+
 import { useEffect, useState } from 'react';
 import { icon } from "leaflet"
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
@@ -9,11 +9,12 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css'; // Re-uses images from ~leaflet package
 import 'leaflet-defaulticon-compatibility';
 
-import mapStyles from "../../styles/Map.module.css"
+import styles from "../../styles/Map.module.css"
 
 const ICON = icon({
   iconUrl: "marker.png",
   iconSize: [16, 10],
+  popupAnchor:  [-3, -76]
 })
 
 const Map: React.FC = () => {
@@ -54,7 +55,8 @@ const Map: React.FC = () => {
                         <Marker
                             position={[parseFloat(truck.latitude), parseFloat(truck.longitude)]}
                             key={Math.random()}
-                            icon={ICON}>
+                            icon={ICON}
+                        >
                             <Popup>
                                 <h3>{truck.applicant}</h3> <br/>
                                 <p>{truck.address}</p>

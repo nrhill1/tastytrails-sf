@@ -1,4 +1,5 @@
 // ./app/loading.tsx
+
 import "../styles/globals.css";
 import "../styles/loading.module.css"
 
