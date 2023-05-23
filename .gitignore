@@ -21,6 +21,7 @@
 .DS_Store
 *.pem
 **.history
+**target/
 
 # debug
 npm-debug.log*
