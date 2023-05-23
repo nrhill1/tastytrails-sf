@@ -13,8 +13,7 @@ import styles from "../../styles/Map.module.css"
 
 const ICON = icon({
   iconUrl: "marker.png",
-  iconSize: [16, 10],
-  popupAnchor:  [-3, -76]
+  iconSize: [14, 10]
 })
 
 const Map: React.FC = () => {
@@ -43,7 +42,7 @@ const Map: React.FC = () => {
     return (
         <div>
             <MapContainer
-                center={[37.7749, -122.4194]} zoom={13} scrollWheelZoom={true}
+                center={[37.7749, -122.4194]} zoom={16} scrollWheelZoom={true}
                 style={{ width: '100%', height: '600px', margin: '0 auto', border: '1.5px whitesmoke solid', borderRadius: '10px', marginBottom: '20px' }}
             >
                 <TileLayer
@@ -58,7 +57,7 @@ const Map: React.FC = () => {
                             icon={ICON}
                         >
                             <Popup>
-                                <h3>{truck.applicant}</h3> <br/>
+                                <h3>{truck.applicant}</h3>
                                 <p>{truck.address}</p>
                             </Popup>
                         </Marker>
