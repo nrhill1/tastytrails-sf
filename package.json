@@ -19,6 +19,8 @@
     "dotenv": "^16.0.3",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
+    "esri-leaflet": "^3.0.10",
+    "esri-leaflet-geocoder": "^3.1.4",
     "leaflet": "^1.9.4",
     "leaflet-control-geocoder": "^2.4.0",
     "leaflet-defaulticon-compatibility": "^0.1.1",
@@ -32,6 +34,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@types/esri-leaflet-geocoder": "^2.2.3",
     "@types/leaflet": "^1.9.3"
   }
 }
