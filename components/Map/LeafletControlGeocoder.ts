@@ -20,7 +20,7 @@ function LeafletControlGeocoder() {
     var gc = new Geocoder({
       geocoder: new geocoders.Nominatim(),
       position: "topleft",
-      placeholder: "Search here...",
+      placeholder: "Type an address here & press enter...",
       defaultMarkGeocode: false,
       showUniqueResult: true
     })
