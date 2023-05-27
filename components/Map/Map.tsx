@@ -53,7 +53,7 @@ const Map: React.FC = (props) => {
 
   useEffect(() => {
     setFoodTrucks(data)
-  })
+  }, [])
 
   return (
     <div>
