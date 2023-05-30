@@ -19,13 +19,20 @@ import styles from "../../styles/Map.module.css"
 
 // Icon for Food Truck
 const TRUCK_ICON = icon({
-  iconUrl: "marker.png",
+  iconUrl: "truck.png",
   iconSize: [24, 32]
 })
 
 // This function formats an address properly before it's displayed in the Leaflet popup
-function addressFormatter(str: String) {
-  return str.toLowerCase().replace(/\b\w/g, s => s.toUpperCase()) + "."
+function sfAddressFormatter(str: String) {
+  if (str == "Assessors Block 7283/Lot004") {return "Lake Merced Park"}
+  if (str == "Assessors Block 8732/Lot001") {return "Mission Bay Blvd. South & 4th St."}
+  str =  str.toLowerCase().replace(/\b\w/g, s => s.toUpperCase())
+  if (str.includes("03rd")) {return str.replace("03rd", "3rd")}
+  if (str.includes("04th")) {return str.replace("04th", "4th")}
+  else {
+    return str
+  }
 }
 
 const Map: React.FC = (props) => {
@@ -56,13 +63,13 @@ const Map: React.FC = (props) => {
   }, [])
 
   return (
-    <div>
+    <div className='mapcontainer_border'>
       <MapContainer
         center={[37.7749, -122.4194]} zoom={16} scrollWheelZoom={true}
         style={{ color: 'black', width: '100%', height: '620px', margin: '0 auto', border: '2.5px whitesmoke solid', borderRadius: '10px', marginBottom: '20px' }}
       >
         <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
         {foodTrucks.length > 0 ? foodTrucks.map((truck) => {
@@ -77,7 +84,7 @@ const Map: React.FC = (props) => {
               >
                 <Popup className={styles.item_popup}>
                   <h3><b><u>{truck.applicant}</u></b></h3>
-                  <p><b>Location:</b> {addressFormatter(truck.address)}</p>
+                  <p><b>Location:</b> {sfAddressFormatter(truck.address)}</p>
                 </Popup>
               </Marker>
             )
