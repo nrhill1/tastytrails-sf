@@ -25,11 +25,22 @@ const TRUCK_ICON = icon({
 
 // This function formats an address properly before it's displayed in the Leaflet popup
 function sfAddressFormatter(str: String) {
+
   if (str == "Assessors Block 7283/Lot004") {return "Lake Merced Park"}
   if (str == "Assessors Block 8732/Lot001") {return "Mission Bay Blvd. South & 4th St."}
+
   str =  str.toLowerCase().replace(/\b\w/g, s => s.toUpperCase())
+
+  if (str.includes("01st")) {return str.replace("01st", "1st")}
+  if (str.includes("02nd")) {return str.replace("02nd", "2nd")}
   if (str.includes("03rd")) {return str.replace("03rd", "3rd")}
   if (str.includes("04th")) {return str.replace("04th", "4th")}
+  if (str.includes("05th")) {return str.replace("05th", "5th")}
+  if (str.includes("06th")) {return str.replace("06th", "6th")}
+  if (str.includes("07th")) {return str.replace("07th", "7th")}
+  if (str.includes("08th")) {return str.replace("08th", "8th")}
+  if (str.includes("09th")) {return str.replace("09th", "9th")}
+
   else {
     return str
   }
@@ -66,7 +77,7 @@ const Map: React.FC = (props) => {
     <div className='mapcontainer_border'>
       <MapContainer
         center={[37.7749, -122.4194]} zoom={16} scrollWheelZoom={true}
-        style={{ color: 'black', width: '100%', height: '620px', margin: '0 auto', border: '2.5px whitesmoke solid', borderRadius: '10px', marginBottom: '20px' }}
+        style={{ color: 'black', width: '100%', height: '575px', margin: '0 auto', border: '2.5px whitesmoke solid', borderRadius: '10px' }}
       >
         <TileLayer
           url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
