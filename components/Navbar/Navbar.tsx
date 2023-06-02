@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
           <AuthButton />
           <p className="block text-4xl mx-5 lg:inline-block text-teal-200"> • </p>
           <a href="https://github.com/nrhill1/tastytrails-sf" target="_blank" className="block text-2xl lg:inline-block text-teal-200 hover:text-white hover:ease-out duration-500">
-            Code
+            Source Code
           </a>
         </div>
       </div>

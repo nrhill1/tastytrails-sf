@@ -1,10 +1,10 @@
 // ./components/Header/index.tsx
-'use client';
+
 
 import dynamic from "next/dynamic";
 
 const Header = dynamic(() => import("./Header"), {
-    ssr: false,
+    ssr: true,
 })
 
 export default Header;
