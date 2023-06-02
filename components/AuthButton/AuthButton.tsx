@@ -9,13 +9,13 @@ const AuthButton: React.FC = () => {
   const { data: session } = useSession()
   if (session) {
     return (
-      <div className="block text-2xl lg:inline-block mr-4 text-teal-200 hover:text-white hover:ease-out duration-500">
+      <div className="block text-2xl lg:inline-block text-teal-200 hover:text-white hover:ease-out duration-500">
         <button onClick={() => signOut()}>Sign out</button>
       </div>
     )
   }
   return (
-    <div className="block text-2xl lg:inline-block text-teal-200 mr-4 hover:text-white hover:ease-out duration-500">
+    <div className="block text-2xl lg:inline-block text-teal-200 hover:text-white hover:ease-out duration-500">
       <button onClick={() => signIn()}>Sign in</button>
     </div>
   )

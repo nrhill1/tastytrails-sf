@@ -1,7 +1,9 @@
 // ./app/loading.tsx
 
+// Style Imports
 import "../styles/globals.css";
 import "../styles/loading.module.css"
+
 
 export default function loading() {
     return (
