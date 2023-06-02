@@ -1,18 +1,22 @@
 // ./app/page.tsx
+"use client";
 
-import "../styles/globals.css";
-
+// Component Imports
+import AuthButton from '../components/AuthButton'
+import Header from '../components/Header'
 import Map from "../components/Map";
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "../components/Navbar";
+// Style Imports
+import "../styles/globals.css";
+import styles from "../styles/page.module.css"
 
 
 export default function Home() {
   return (
     <div>
+      <Header />
+      {/* <AuthButton /> */}
       <div className="map_container">
-        <h1 className="transition text-5xl font-bold underline hover:animate-psychedelic">
-          TastyTrails SF
-        </h1>
         <Navbar />
         <Map />
       </div>

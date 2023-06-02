@@ -1,18 +1,16 @@
 // ./app/layout.tsx
-"use client";
+'use client';
 // Auth Imports
-import {SessionProvider} from 'next-auth/react'
-
+import { SessionProvider } from 'next-auth/react'
 // Style Imports
 import '../styles/globals.css'
 import { Vibur } from 'next/font/google'
-import { Session } from 'inspector';
+
 
 const vb = Vibur({
-  subsets: ["latin"],
-  weight: "400"
+  subsets: ['latin'],
+  weight: '400'
 });
-
 
 export default function RootLayout({
   children,
@@ -20,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <SessionProvider>
         <body className={vb.className}>{children}</body>
       </SessionProvider>

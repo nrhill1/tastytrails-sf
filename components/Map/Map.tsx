@@ -46,7 +46,7 @@ function sfAddressFormatter(str: String) {
   }
 }
 
-const Map: React.FC = (props) => {
+const Map: React.FC = () => {
 
   // State Hooks
   const [foodTrucks, setFoodTrucks] = useState<any[]>([]);
