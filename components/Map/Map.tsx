@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { icon } from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import LeafletControlGeocoder from './LeafletControlGeocoder';
-import data from "./data.json"
+import data from "../../public/data.json"
 
 // Import Leaflet CSS
 import 'leaflet/dist/leaflet.css';
@@ -46,7 +46,7 @@ function sfAddressFormatter(str: String) {
   }
 }
 
-const Map: React.FC = (props) => {
+const Map: React.FC = () => {
 
   // State Hooks
   const [foodTrucks, setFoodTrucks] = useState<any[]>([]);
@@ -77,7 +77,7 @@ const Map: React.FC = (props) => {
     <div className='mapcontainer_border'>
       <MapContainer
         center={[37.7749, -122.4194]} zoom={16} scrollWheelZoom={true}
-        style={{ color: 'black', width: '100%', height: '575px', margin: '0 auto', border: '2.5px whitesmoke solid', borderRadius: '10px' }}
+        style={{ color: 'black', width: '100%', height: '78.5vh', margin: '0 auto', border: '2.5px whitesmoke solid', borderRadius: '10px' }}
       >
         <TileLayer
           url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
