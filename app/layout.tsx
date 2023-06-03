@@ -6,20 +6,21 @@ import { SessionProvider } from 'next-auth/react'
 import '../styles/globals.css'
 import { Vibur } from 'next/font/google'
 
-
+// font
 const vb = Vibur({
   subsets: ['latin'],
   weight: '400'
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+interface IProps {
+  children: React.ReactNode;
+  session: any;
+}
+
+export default function RootLayout({ children, session}: IProps) {
   return (
     <html lang='en'>
-      <SessionProvider>
+      <SessionProvider session={session}>
         <body className={vb.className}>{children}</body>
       </SessionProvider>
     </html>
