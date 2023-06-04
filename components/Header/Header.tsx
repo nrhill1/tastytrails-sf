@@ -1,7 +1,7 @@
 // ./components/Header/Header.tsx
 "use client";
 
-
+// Style Imports
 import '../../styles/globals.css'
 
 function Header() {

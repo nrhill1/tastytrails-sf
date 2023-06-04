@@ -1,19 +1,19 @@
 // ./components/Map/Map.tsx
 "use client";
 
-// IMPORTS
+// React Imports
 import { useEffect, useState } from 'react';
+
+// Leaflet Imports
 import { icon } from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import LeafletControlGeocoder from './LeafletControlGeocoder';
 import data from "../../public/data.json"
 
-// Import Leaflet CSS
+// Style Imports
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css'; // Re-uses images from ~leaflet package
 import 'leaflet-defaulticon-compatibility';
-
-// Import custom CSS
 import styles from "../../styles/Map.module.css"
 
 
