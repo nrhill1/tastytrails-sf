@@ -1,7 +1,6 @@
 // ./components/Navbar/Navbar.tsx
 
 // React Imports
-import { useEffect, useState } from 'react';
 import { useSession, signIn, signOut } from "next-auth/react";
 
 
