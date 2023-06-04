@@ -8,10 +8,10 @@ import Navbar from "../components/Navbar";
 
 // Style Imports
 import "../styles/globals.css";
-// import styles from "../styles/page.module.css"
 
 
 export default function Home() {
+  const {data: session} = useSession()
   return (
     <div>
       <Header />

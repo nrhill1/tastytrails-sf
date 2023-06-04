@@ -51,7 +51,7 @@ const Map: React.FC = () => {
   // State Hooks
   const [foodTrucks, setFoodTrucks] = useState<any[]>([]);
 
-  // Fetch data from sfgov.org -- APP TOKEN NO LONGER WORKING
+  // This block of code fetches data from sfgov.org -- APP TOKEN NO LONGER WORKING
   // useEffect(() => {
   //   fetch("https://data.sfgov.org/resource/rqzj-sfat.json", {
   //     method: "GET",
