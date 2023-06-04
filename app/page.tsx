@@ -2,7 +2,6 @@
 "use client";
 
 // Component Imports
-import AuthButton from '../components/AuthButton'
 import Header from '../components/Header'
 import Map from "../components/Map";
 import Navbar from "../components/Navbar";
@@ -15,7 +14,6 @@ export default function Home() {
   return (
     <div>
       <Header />
-      {/* <AuthButton /> */}
       <div className="map_container">
         <Navbar />
         <Map />
