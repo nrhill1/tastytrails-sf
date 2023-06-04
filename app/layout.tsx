@@ -1,7 +1,10 @@
 // ./app/layout.tsx
 'use client';
+
 // Auth Imports
 import { SessionProvider } from 'next-auth/react'
+import type { Session } from "next-auth";
+
 // Style Imports
 import '../styles/globals.css'
 import { Vibur } from 'next/font/google'
@@ -14,8 +17,9 @@ const vb = Vibur({
 
 interface IProps {
   children: React.ReactNode;
-  session: any;
+  session: Session | null;
 }
+
 
 export default function RootLayout({ children, session}: IProps) {
   return (
